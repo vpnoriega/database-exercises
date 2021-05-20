@@ -28,3 +28,5 @@ VALUES ('Michael Jackson', 'Thriller', 1982, 'Pop, Rock, R&B', 47.3),
         ('Santana','Supernatural',1999,'Latin rock', 20.5),
         ('Guns N'' Roses', 'Appetite for Destruction', 1987,'Hard rock', 21.9),
         ('Elton John','Goodbye Yellow Brick Road',	1973, 'rock, pop rock, glam rock', 8.5);
+
+SELECT * FROM albums; --to show all info in terminal
