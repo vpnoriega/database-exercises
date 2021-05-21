@@ -35,4 +35,17 @@ WHERE year(hire_date)
     BETWEEN 1990 AND 1999
   AND MONTH(birth_date) = 12
   AND day(birth_date)=25
-ORDER BY birth_date ASC;
+ORDER BY birth_date ASC, hire_date DESC;
+
+
+-- For your query of employees born on Christmas and hired in the 90s, use datediff() to find how many days they have been working at the company (Hint: You might also need to use now() or curdate()).
+
+-- date dif is getting the difference between the days passed in
+
+SELECT *, datediff(curdate(), hire_date) AS Days_worked
+FROM employees
+WHERE year(hire_date)
+    BETWEEN 1990 AND 1999
+  AND MONTH(birth_date) = 12
+  AND day(birth_date)=25
+ORDER BY Days_worked DESC LIMIT 10; -- added to view top 10 employees with longest Days Worked
